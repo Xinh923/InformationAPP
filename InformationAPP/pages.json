@@ -1,0 +1,70 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/news/news",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/tabbar/video/video",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/tabbar/topic/topic",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/tabbar/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#dd524d",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/tabbar/news/news",
+				"iconPath": "static/news.png",
+				"selectedIconPath": "static/select_news.png",
+				"text": "新闻"
+			}, {
+				"pagePath": "pages/tabbar/video/video",
+				"iconPath": "static/video.png",
+				"selectedIconPath": "static/select_video.png",
+				"text": "视频"
+			},
+			{
+				"pagePath": "pages/tabbar/topic/topic",
+				"iconPath": "static/topic.png",
+				"selectedIconPath": "static/select_topic.png",
+				"text": "话题"
+			},
+			{
+				"pagePath": "pages/tabbar/my/my",
+				"iconPath": "static/my.png",
+				"selectedIconPath": "static/select_my.png",
+				"text": "未登录"
+			}
+		]
+	}
+
+}
