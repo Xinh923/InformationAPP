@@ -183,7 +183,7 @@
 		background-color: #DD524D;
 	}
 
-	three-s {
+	.three-s {
 		color: #FFFFFF;
 	}
 
@@ -198,8 +198,8 @@
 		flex-direction: row;
 	}
 
-	a {
-		margin: 20 rpx 10rpx 10rpx 20rpx;
+	.a {
+		margin: 20rpx 10rpx 10rpx 20rpx;
 	}
 
 	.d-threess {
@@ -240,6 +240,7 @@
 		border-radius: 40rpx;
 		padding: 5rpx 30rpx 6rpx 30rpx;
 		margin-right: 1rpx;
+		color: #808080;
 	}
 
 	.search_img {
