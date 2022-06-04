@@ -16,7 +16,7 @@
 
 		<!-- 第二部分-视频1 -->
 		<view class="sp">
-			<navigator url="../videocontent/videocontent">
+			<navigator url="../../videoinfo/videoinfo">
 				<view class="x">600斤的公牛不甘心被杀，宁愿跳进大海之中，结局令人遗憾</view>
 			</navigator>
 			<video class="y" style="width: 100%;height: 400rpx;" src="http://"></video>
