@@ -2,7 +2,7 @@
 	<view>
 		<view class="dd">
 			<view class="item1">
-				<image class="tx" style="width: 130rpx;height: 130rpx;" src="../../static/yonghu.png"></image>
+				<image class="tx" style="width: 130rpx;height: 130rpx;" src="../../../static/user.png"></image>
 				<view class="item2">
 					<view class="item3">HI~欢迎回来</view>
 					<view class="item4"><text class="itemz">登录</text></view>
@@ -18,7 +18,7 @@
 			<view>
 				<navigator url="../topic/topic">
 					<view class="item-left">
-						<image class="menpiao" src="../../static/shoucang.png"></image>
+						<image class="menpiao" src="../../../static/Collection.png"></image>
 					</view>
 					<view class="item-left">收藏</view>
 				</navigator>
@@ -26,7 +26,7 @@
 			<view>
 				<navigator url="../topic/topic">
 					<view class="item-left">
-						<image class="menpiao1" src="../../static/lishi.png"></image>
+						<image class="menpiao1" src="../../../static/history.png"></image>
 					</view>
 					<view class="item-left">历史</view>
 				</navigator>
@@ -34,24 +34,24 @@
 			<view>
 				<navigator url="../topic/topic">
 					<view class="item-left">
-						<image class="menpiao2" src="../../static/shezhi.png"></image>
+						<image class="menpiao2" src="../../../static/setting.png"></image>
 					</view>
 					<view class="item-left">设置</view>
 				</navigator>
 			</view>
 		</view>
 		<view>
-			<image style="width: 100%; height: 90rpx;" src="../../static/middle1.jpg"></image>
+			<image style="width: 100%; height: 90rpx;" src="../../../static/ad.jpg"></image>
 		</view>
 		<view class="button">
-			<image class="buttons" style="width: 100%;height: 300rpx;" src="../../static/middle2.jpg"></image>
+			<image class="buttons" style="width: 100%;height: 300rpx;" src="../../../static/peitu.jpg"></image>
 			<view class="button"><text class="hh">已有</text>385,893<text class="hh">人</text></view>
 			<view class="button"><text class="hh">在这里发布身边的新鲜事</text></view>
 			<view class="reg-right">我也要发布</view>
 		</view>
 		<view class="button">
 			<view class="buttonx">先去逛逛<image class="buttony" style="width: 35rpx;height: 35rpx;"
-					src="../../static/xiayibu.png"></image>
+					src="../../../static/next.png"></image>
 			</view>
 		</view>
 		<view class="zh"></view>
@@ -74,7 +74,7 @@
 <style>
 	.dd {
 		padding-bottom: 0rpx;
-		background-image: url(../../static/i.jpg);
+		background-image: url(../../../static/peitu.jpg);
 		background-position: center;
 		margin-top: -30rpx;
 		height: 280rpx;
