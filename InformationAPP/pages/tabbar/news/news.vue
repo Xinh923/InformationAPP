@@ -50,7 +50,7 @@
 			</view>
 		</view>
 		<!--新闻-1-->
-		<navigator url="../nesinfo/newsinfo">
+		<navigator url="../../newsinfo/newsinfo">
 			<view class="d-three">
 				<view class="d-threes">
 					<view>
