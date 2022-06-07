@@ -10,6 +10,7 @@
 				</scroll-view>
 			</view>
 		</view>
+
 		<view class="three">
 			<view class="three-s">
 				为您更新了15条内容
@@ -17,99 +18,68 @@
 		</view>
 		<view class="twos">
 			<view class="twoss">
-				20°C 阴 南安 PM2.511
+				{{temperature}} {{weather}} {{city}} {{wind_direction}}
 			</view>
+
 			<view class="left">
 				<input type="text" style="width: 180rpx;margin-right: 20rpx;font-size: 25rpx;" placeholder="搜索关键词"
 					class="search_input"></input>
 			</view>
 		</view>
 
-		<view class="d-three">
+		<!-- 置顶新闻 -->
+		<view class="d-three" v-for="(item,i) in newslist.slice(0,2)" :key="i+'only'">
 			<view class="xw-three">
-				<view>
-					2022,我们温暖的记忆
+				<view style="margin-left: 5px;">
+					{{item.newstitle}}
 				</view>
 				<view class="threes">
 					<view class="j"><text class="zd">置顶</text></view>
-					<view class="j">新闻联播</view>
+					<view class="j">{{item.newssource}}</view>
 
-					<view class="j">45评</view>
+					<view class="j">{{item.newsheat}}评</view>
 				</view>
 			</view>
-			<view class="xw-three">
-				<view>
-					森林大县59年无大火是怎么做到的
-				</view>
-				<view class="threes">
-					<view class="j"><text class="zd">置顶</text></view>
-					<view class="j">光明网</view>
+		</view>
 
-					<view class="j">17评</view>
-				</view>
-			</view>
-		</view>
-		<!--新闻-1-->
-		<navigator url="../../newsinfo/newsinfo">
-			<view class="d-three">
-				<view class="d-threes">
-					<view>
-						<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="d-threess">几年近疯狂，涉案金额超3亿，一个“背包客”牵出全国跨省“倒烟”大案</view>
-				</view>
-				<view>
-					<view class="threess">大河网 38评</view>
-				</view>
-			</view>
-		</navigator>
-		<!--新闻-2-->
-		<view class="d-three">
+		<!--新闻列表-->
+		<view class="d-three" v-for="(item,i) in newslist.slice(2,5)" :key="i">
 			<view class="d-threes">
 				<view>
-					<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
+					<image style="width: 200rpx;height: 160rpx;" :src="item.newsimage"></image>
 				</view>
-				<view class="d-threess">中国老年化水平加速，论养老保险在中国的重要性？人们应不应买保险？</view>
+				<view class="d-threess">{{item.newstitle}}</view>
 			</view>
 			<view>
-				<view class="threess">新京报官微 58评</view>
+				<view class="threess">{{item.newssource}} {{item.newsheat}}评</view>
 			</view>
 		</view>
-		<view class="d-three">
+
+		<view class="d-three" v-for="item in ad" :key="item.id">
+			<view>{{item.adtilte}}</view>
+			<view class="d-threes">
+				<view class="a">
+					<image style="width: 200rpx;height: 160rpx;" :src="item.adimage1"></image>
+				</view>
+				<view class="a">
+					<image style="width: 200rpx;height: 160rpx;" :src="item.adimage2"></image>
+				</view>
+				<view class="a">
+					<image style="width: 200rpx;height: 160rpx;" :src="item.adimage3"></image>
+				</view>
+			</view>
+			<view class="threess">广告 {{item.adsource}}</view>
+		</view>
+
+		<view class="d-three" v-for="(item,i) in newslist.slice(5)" :key="i">
 			<view class="d-threes">
 				<view>
-					<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
+					<image style="width: 200rpx;height: 160rpx;" :src="item.newsimage"></image>
 				</view>
-				<view class="d-threess">人们都喜欢聚在一起玩耍，人们聚在一起欢呼是好？是坏？</view>
+				<view class="d-threess">{{item.newstitle}}</view>
 			</view>
 			<view>
-				<view class="threess">烽火君 18评</view>
-			</view>
-		</view>
-		<view class="d-three">
-			<view>加微信交友群，喜欢就聊，找喜欢的人</view>
-			<view class="d-threes">
-				<view class="a">
-					<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
-				</view>
-				<view class="a">
-					<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
-				</view>
-				<view class="a">
-					<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
-				</view>
-			</view>
-			<view class="threess">广告 我主良缘文化</view>
-		</view>
-		<view class="d-three">
-			<view class="d-threes">
-				<view>
-					<image style="width: 200rpx;height: 160rpx;" src="../../../static/2.jpg"></image>
-				</view>
-				<view class="d-threess">随着经济发展，中国各个城市发展速度越来越快，经济发展迅速，人们幸福快乐</view>
-			</view>
-			<view>
-				<view class="threess">时代发展 8评</view>
+				<view class="threess">{{item.newssource}} {{item.newsheat}}评</view>
 			</view>
 		</view>
 	</view>
@@ -121,12 +91,22 @@
 			return {
 				// 资讯二级标题
 				newsTitle: [],
+				newslist: [],
+				city: '南安',
+				weather: '',
+				temperature: '',
+				wind_direction: '',
+				ad: {}
 			}
 		},
-		onLoad() {
+		onShow() {
 			this.getnewstitle();
+			this.sendGetWeather();
+			this.getnewslist();
+			this.getad();
 		},
 		methods: {
+			// 获取顶部导航栏
 			getnewstitle() {
 				console.log('-- -- - 执行查询二级新闻标题-- -- - ');
 				uniCloud.callFunction({
@@ -134,6 +114,46 @@
 					success: (e) => {
 						console.log(e.result);
 						this.newsTitle = e.result.data;
+						// console.log(this.newsTitle);
+					}
+				})
+			},
+			// 获取天气
+			sendGetWeather() {
+				uni.request({
+					url: 'http://wthrcdn.etouch.cn/weather_mini?city=' + this.city,
+					method: 'GET',
+					success: res => {
+						this.weather = res.data.data.forecast[0].type;
+						this.temperature = res.data.data.wendu + '°C';
+						this.wind_direction = res.data.data.forecast[0].fengxiang;
+						// console.log(this.weather + '------' + this.temperature + '-----' + this.wind_direction)
+					},
+					fail: () => {
+						this.openmsg("警告", "天气接口获取失败")
+					},
+					complete: () => {}
+				});
+			},
+			// 获取新闻数据
+			getnewslist() {
+				// console.log('------执行新闻资讯查询------');
+				uniCloud.callFunction({
+					name: 'getNews',
+					success: (e) => {
+						console.log(e);
+						this.newslist = e.result.data;
+						console.log(this.newslist);
+					}
+				})
+			},
+			getad() {
+				console.log('-----执行广告查询操作-----');
+				uniCloud.callFunction({
+					name: 'getAd',
+					success: (e) => {
+						this.ad = e.result.data;
+						console.log(this.ad);
 					}
 				})
 			}
@@ -175,8 +195,6 @@
 		height: 40rpx;
 	}
 
-	.xw-three {}
-
 	.three {
 		width: 100%;
 		height: 120rpx;
@@ -199,7 +217,7 @@
 	}
 
 	.a {
-		margin: 20rpx 10rpx 10rpx 20rpx;
+		margin: 20rpx 20rpx 10rpx 0rpx;
 	}
 
 	.d-threess {

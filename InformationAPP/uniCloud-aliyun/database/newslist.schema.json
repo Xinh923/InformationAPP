@@ -1,0 +1,46 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"newstitle": {
+			"bsonType": "string",
+			"title": "新闻标题",
+			"description": "新闻标题",
+			"trim": "both"
+		},
+		"newscontent": {
+			"bsonType": "string",
+			"title": "新闻内容",
+			"description": "新闻内容",
+			"trim": "both"
+		},
+		"newsimage": {
+			"bsonType": "string",
+			"title": "新闻配图",
+			"description": "新闻配图",
+			"trim": "both"
+		},
+		"newssource": {
+			"bsonType": "string",
+			"title": "新闻来源",
+			"description": "新闻来源",
+			"trim": "both"
+		},
+		"newsheat": {
+			"bsonType": "int",
+			"title": "新闻热度",
+			"description": "新闻热度",
+			"trim": "both"
+		}
+	}
+}

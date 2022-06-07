@@ -1,0 +1,7 @@
+{
+  "name": "getAd",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

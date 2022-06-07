@@ -1,0 +1,46 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"adtilte": {
+			"bsonType": "string",
+			"title": "广告标题",
+			"description": "广告标题",
+			"trim": "both"
+		},
+		"adimage1": {
+			"bsonType": "string",
+			"title": "广告图片1",
+			"description": "广告图片1",
+			"trim": "both"
+		},
+		"adimage2": {
+			"bsonType": "string",
+			"title": "广告图片2",
+			"description": "广告图片2",
+			"trim": "both"
+		},
+		"adimage3": {
+			"bsonType": "string",
+			"title": "广告图片3",
+			"description": "广告图片3",
+			"trim": "both"
+		},
+		"adsource": {
+			"bsonType": "string",
+			"title": "广告来源",
+			"description": "广告来源",
+			"trim": "both"
+		}
+	}
+}
