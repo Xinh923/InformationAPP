@@ -1,5 +1,5 @@
 <template>
-	<!--顶部-视频内容-->
+	<!--顶部-新闻详情-->
 	<view class="item">
 		<view class="sh">
 			<view>
@@ -16,11 +16,11 @@
 				<view class="zt">{{newssource}}</view>
 				<view class="rq">{{newstime}}</view>
 			</view>
-			<view class="reg-rigth">+关注</view>
+			<view v-bind:class="className" @click="gz()">{{follow}}</view>
 		</view>
 		<view class="items">
 			<view style="text-align: center;margin-top: 15px;margin-bottom: 15px;">
-				<image style="width: 600rpx;height: 300rpx; border-radius: 20rpx;" :src="newsimage">
+				<image style="width: 600rpx;height: 300rpx;" :src="newsimage">
 				</image>
 			</view>
 			<view>
@@ -37,44 +37,45 @@
 			</view>
 			<view class="ptjj">平台声明</view>
 		</view>
+		<!-- 精彩推荐 -->
 		<view class="jc">
 			<view class="jcs">精彩推荐</view>
 		</view>
-		<view class="xw">
+		<view class="xw" v-for="(item,i) in hotnews" :key="i+'hot'">
 			<view>
-				<view>单节24分，5个球</view>
+				<view>{{item.hottitle}}</view>
 				<view class="xwnr">
-					<view class="xwnrs">科技搜狐</view>
-					<view class="xwnrs">3434评</view>
+					<view class="xwnrs">{{item.hotsource}}</view>
+					<view class="xwnrs">{{item.heat}}评</view>
 				</view>
 			</view>
-			<view>
+			<view style="margin-bottom: 10px;">
 				<image style="width: 200rpx;height: 150rpx; border-radius: 20rpx;margin-left: 10rpx;"
-					src="../../static/2.jpg">
+					:src="item.hotimage">
 				</image>
 			</view>
 		</view>
 
+		<!-- 评论区 -->
 		<view class="jc">
 			<view class="jcs">我来说两句</view>
 		</view>
-
 		<view style="color: #c5c5c5; margin-bottom: 30rpx; margin-left: 20rpx;">热门评论</view>
-		<view class="pl">
-			<view>
-				<image style="width: 80rpx; height: 80rpx;border-radius: 50%;" src="../../static/2.jpg"></image>
-			</view>
+		<view class="pl" v-for="(item,i) in hotreview" :key="i+'hotview'">
 			<view class="lp">
 				<view class="pll">
-					<view>
-						<view class="zt1">网友222222</view>
+					<view style=" display: inline-block;">
+						<image style="width: 80rpx; height: 80rpx;border-radius: 50%;" :src="item.cmimage"></image>
+					</view>
+					<view style="margin-left: 20rpx;display: inline-block;">
+						<view class="zt1">{{item.cmname}}</view>
 						<view class="sj">
-							<view class="sjs">2小时钱</view>
-							<view class="sjs">河北石家庄</view>
+							<view class="sjs">{{item.cmtime}}</view>
+							<view class="sjs">{{item.cmaddress}}</view>
 						</view>
 					</view>
-					<view class="pl">
-						<view class="plll">7</view>
+					<view class="dz">
+						<view class="plll">{{item.cmhot}}</view>
 						<view class="plll">
 							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
 						</view>
@@ -83,10 +84,9 @@
 						</view>
 					</view>
 				</view>
-				<view class="pll">微笑生活，勇敢面对。</view>
+				<view class="plcontent">{{item.cmcontent}}</view>
 			</view>
 		</view>
-
 
 		<!--底部-->
 		<view class="zdb">
@@ -120,12 +120,20 @@
 				newsheadimg: "",
 				newsicon: "",
 				newstime: "",
-				newsProofread: ""
+				newsProofread: "",
+				hotnews: [],
+				follow: "+关注",
+				className: "reg-rigth",
+				hotreview: []
 			}
 		},
 		onLoad(options) {
 			console.log(options.id)
 			this.getnewsId(options.id)
+		},
+		onShow() {
+			this.getHotNews();
+			this.getHotReview();
 		},
 		methods: {
 			getnewsId(_id) {
@@ -146,6 +154,26 @@
 						this.newstime = e.result.data[0].newstime;
 						this.newsProofread = e.result.data[0].newsProofread;
 						// this.newname = e.result.data[0].newname,
+					}
+				})
+			},
+			getHotNews() {
+				uniCloud.callFunction({
+					name: 'getHotnews',
+					success: (e) => {
+						this.hotnews = e.result.data;
+					}
+				})
+			},
+			gz() {
+				this.follow = "已关注";
+				this.className = "check_class";
+			},
+			getHotReview() {
+				uniCloud.callFunction({
+					name: 'getHoretview',
+					success: (e) => {
+						this.hotreview = e.result.data;
 					}
 				})
 			}
@@ -182,20 +210,7 @@
 	.tp {
 		width: 50rpx;
 		height: 50rpx;
-		margin: 0rpx 20rpx -10rpx 0rpx;
-	}
-
-	.sj {
-		color: #C8C7CC;
-		font-size: 30rpx;
-		display: flex;
-		flex-direction: row;
-	}
-
-	.sjs {
-		margin-right: 30rpx;
-		font-size: 20rpx;
-		margin-top: 5rpx;
+		margin: 15rpx 20rpx -10rpx 0rpx;
 	}
 
 	.wb {
@@ -267,6 +282,7 @@
 		height: 37rpx;
 		margin-left: -15rpx;
 		margin-bottom: 40rpx;
+		border: 1px solid red;
 	}
 
 	.jcs {
@@ -292,31 +308,6 @@
 	.xwnrs {
 		margin-right: 30rpx;
 		font-size: 25rpx;
-	}
-
-	.pl {
-		display: flex;
-		flex-direction: ;
-		margin-right: -300rpx;
-		margin-bottom: 80rpx;
-		border: 1px solid red;
-	}
-
-	.lp {
-		margin-left: -30rpx;
-	}
-
-	.pll {
-		display: flex;
-		flex-direction: ;
-		justify-content: space-between;
-		-wekbet-justify-content: space-between;
-		margin-left: 60rpx;
-	}
-
-	.plll {
-		margin-right: 65rpx;
-		color: #999999;
 	}
 
 	.xhx {
@@ -359,9 +350,70 @@
 		margin-left: 70rpx;
 	}
 
+	/* 评论区内容 */
+	.pl {
+		margin-top: 10rpx;
+		/* width: 700rpx; */
+		margin-right: 20rpx;
+	}
+
+	.pll {
+		display: inline-block;
+		margin-left: 0rpx;
+		width: 690rpx;
+	}
+
+	.plll {
+		display: inline-block;
+		margin-right: 60rpx;
+		width: 30rpx;
+		line-height: 30rpx;
+		text-align: center;
+		color: #999999;
+	}
+
+	.dz {
+		float: right;
+		margin-top: 10rpx;
+		margin-right: 10rpx;
+		display: inline-block;
+	}
+
 	.zt1 {
+		width: 240rpx;
 		font-size: 30rpx;
 		color: #007AFF;
 		margin-top: 10rpx;
+	}
+
+	.sj {
+		color: #C8C7CC;
+		font-size: 30rpx;
+		display: flex;
+		flex-direction: row;
+		flex-grow: 1;
+	}
+
+	.sjs {
+		margin-right: 30rpx;
+		font-size: 20rpx;
+		margin-top: 5rpx;
+	}
+
+	.plcontent {
+		margin: 4rpx 70rpx 30rpx 100rpx;
+	}
+
+	/* 评论框 */
+	.check_class {
+		background: #A3A3A3;
+		height: 45rpx;
+		border-radius: 60rpx;
+		color: #FFFFFF;
+		width: 120rpx;
+		text-align: center;
+		margin-top: 30rpx;
+		margin-left: 100rpx;
+		font-size: 30rpx;
 	}
 </style>
