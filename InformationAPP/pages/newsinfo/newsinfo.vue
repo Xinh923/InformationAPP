@@ -173,6 +173,9 @@
 
 			}
 		},
+		onLoad(options) {
+			console.log(options.id)
+		},
 		methods: {
 
 		}

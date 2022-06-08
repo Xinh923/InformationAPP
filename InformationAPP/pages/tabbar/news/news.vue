@@ -5,6 +5,7 @@
 			<!--选项卡-->
 			<view class="tab_title">
 				<!--可滚动视图-->
+				<!-- 列表渲染生成标题 -->
 				<scroll-view scroll-x="true" class="scroll_x">
 					<view v-for="item in newsTitle" :key="item.id">{{item.titlename}}</view>
 				</scroll-view>
@@ -13,24 +14,26 @@
 
 		<view class="three">
 			<view class="three-s">
-				为您更新了15条内容
+				为您更新了7条内容
 			</view>
 		</view>
+		<!-- 天气部分 -->
 		<view class="twos">
 			<view class="twoss">
 				{{temperature}} {{weather}} {{city}} {{wind_direction}}
 			</view>
 
 			<view class="left">
-				<input type="text" style="width: 180rpx;margin-right: 20rpx;font-size: 25rpx;" placeholder="搜索关键词"
-					class="search_input"></input>
+				<input type="text" @input="searchNews" style="width: 180rpx;margin-right: 20rpx;font-size: 25rpx;"
+					placeholder="搜索关键词" class="search_input"></input>
 			</view>
 		</view>
 
 		<!-- 置顶新闻 -->
-		<view class="d-three" v-for="(item,i) in newslist.slice(0,2)" :key="i+'only'">
-			<view class="xw-three">
-				<view style="margin-left: 5px;">
+		<view @click="details(item._id)" class="d-three" v-show="isShow" v-for="(item,i) in newslist.slice(0,2)"
+			:key="i+'only'">
+			<view>
+				<view style="margin-left: -5rpx;">
 					{{item.newstitle}}
 				</view>
 				<view class="threes">
@@ -43,7 +46,8 @@
 		</view>
 
 		<!--新闻列表-->
-		<view class="d-three" v-for="(item,i) in newslist.slice(2,5)" :key="i">
+		<view @click="details(item._id)" class="d-three" v-show="isShow" v-for="(item,i) in newslist.slice(2,5)"
+			:key="i+'news'">
 			<view class="d-threes">
 				<view>
 					<image style="width: 200rpx;height: 160rpx;" :src="item.newsimage"></image>
@@ -55,7 +59,7 @@
 			</view>
 		</view>
 
-		<view class="d-three" v-for="item in ad" :key="item.id">
+		<view class="d-three" v-show="isShow" v-for="(item,i) in ad" :key="i+'ad'">
 			<view>{{item.adtilte}}</view>
 			<view class="d-threes">
 				<view class="a">
@@ -71,7 +75,7 @@
 			<view class="threess">广告 {{item.adsource}}</view>
 		</view>
 
-		<view class="d-three" v-for="(item,i) in newslist.slice(5)" :key="i">
+		<view @click="details(item._id)" class="d-three" v-show="isShow" v-for="(item,i) in newslist.slice(5)" :key="i">
 			<view class="d-threes">
 				<view>
 					<image style="width: 200rpx;height: 160rpx;" :src="item.newsimage"></image>
@@ -82,6 +86,20 @@
 				<view class="threess">{{item.newssource}} {{item.newsheat}}评</view>
 			</view>
 		</view>
+		<!-- 根据搜索显示内容 -->
+		<view @click="details(item._id)" class="d-three" v-show="searchnews" v-for="(item,i) in searchlist"
+			:key="i+'search'">
+			<view class="d-threes">
+				<view>
+					<image style="width: 200rpx;height: 160rpx;" :src="item.newsimage"></image>
+				</view>
+				<view class="d-threess">{{item.newstitle}}</view>
+			</view>
+			<view>
+				<view class="threess">{{item.newssource}} {{item.newsheat}}评</view>
+			</view>
+		</view>
+
 	</view>
 </template>
 
@@ -92,11 +110,14 @@
 				// 资讯二级标题
 				newsTitle: [],
 				newslist: [],
+				searchlist: [],
 				city: '南安',
 				weather: '',
 				temperature: '',
 				wind_direction: '',
-				ad: {}
+				ad: {},
+				isShow: true,
+				searchnews: false
 			}
 		},
 		onShow() {
@@ -155,6 +176,31 @@
 						this.ad = e.result.data;
 						console.log(this.ad);
 					}
+				})
+			},
+			searchNews(e) {
+				uniCloud.callFunction({
+					name: 'searchNews',
+					data: {
+						"newssource": e.detail.value,
+					}
+				}).then(res => {
+					console.log(res)
+					if (res.result.affectedDocs > 0) { //如果匹配到的结果>1,证明是拿到结果，就可以将数据返回给界面
+						this.searchlist = res.result.data
+						this.isShow = false;
+						this.searchnews = true
+					} else {
+						this.getnewslist();
+						this.isShow = true;
+						this.searchnews = false //关闭显示区域
+					}
+				})
+			},
+			details(_id) {
+				console.log(_id);
+				uni.navigateTo({
+					url: '../../newsinfo/newsinfo?id=' + _id
 				})
 			}
 		}
@@ -227,7 +273,7 @@
 	.threes {
 		display: flex;
 		flex-direction: row;
-		margin: 5rpx 10rpx 10rpx 10rpx;
+		margin: 5rpx 10rpx 10rpx 0rpx;
 		font-size: 25rpx;
 		color: #808080;
 	}
