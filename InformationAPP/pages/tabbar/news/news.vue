@@ -115,7 +115,7 @@
 				weather: '',
 				temperature: '',
 				wind_direction: '',
-				ad: {},
+				ad: [],
 				isShow: true,
 				searchnews: false
 			}

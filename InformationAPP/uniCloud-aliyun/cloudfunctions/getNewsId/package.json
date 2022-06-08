@@ -1,0 +1,7 @@
+{
+  "name": "getNewsId",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

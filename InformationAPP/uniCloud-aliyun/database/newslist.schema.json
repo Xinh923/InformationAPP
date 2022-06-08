@@ -12,10 +12,22 @@
 		"_id": {
 			"description": "ID，系统自动生成"
 		},
+		"newsicon": {
+			"bsonType": "string",
+			"title": "新闻图标",
+			"description": "新闻图标",
+			"trim": "both"
+		},
 		"newstitle": {
 			"bsonType": "string",
 			"title": "新闻标题",
 			"description": "新闻标题",
+			"trim": "both"
+		},
+		"newsheadimg": {
+			"bsonType": "string",
+			"title": "作者头像",
+			"description": "作者头像",
 			"trim": "both"
 		},
 		"newscontent": {
@@ -36,10 +48,22 @@
 			"description": "新闻来源",
 			"trim": "both"
 		},
+		"newstime": {
+			"bsonType": "string",
+			"title": "新闻发布时间",
+			"description": "新闻发布时间",
+			"trim": "both"
+		},
 		"newsheat": {
 			"bsonType": "int",
 			"title": "新闻热度",
 			"description": "新闻热度",
+			"trim": "both"
+		},
+		"newsProofread": {
+			"bsonType": "string",
+			"title": "新闻校对",
+			"description": "新闻校对",
 			"trim": "both"
 		}
 	}

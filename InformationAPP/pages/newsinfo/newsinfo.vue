@@ -3,29 +3,34 @@
 	<view class="item">
 		<view class="sh">
 			<view>
-				<image class="tp" src="../../static/2.jpg">
-					<text class="wb">新闻标题</text>
+				<image class="tp" :src="newsicon">
+					<text class="wb">{{newstitle}}</text>
 				</image>
 			</view>
 		</view>
 		<view class="dhw">
 			<view>
-				<image class="tps" src="../../static/2.jpg" style="width: 110rpx; height: 110rpx;"></image>
+				<image class="tps" :src="newsheadimg" style="width: 110rpx; height: 110rpx;"></image>
 			</view>
 			<view>
-				<view class="zt">大河网</view>
-				<view class="rq">12/12 10:53</view>
+				<view class="zt">{{newssource}}</view>
+				<view class="rq">{{newstime}}</view>
 			</view>
 			<view class="reg-rigth">+关注</view>
 		</view>
 		<view class="items">
+			<view style="text-align: center;margin-top: 15px;margin-bottom: 15px;">
+				<image style="width: 600rpx;height: 300rpx; border-radius: 20rpx;" :src="newsimage">
+				</image>
+			</view>
 			<view>
-				<text>
-					新闻
+				<text style="display: block; text-indent: 2em;">
+					{{newscontent}}
 				</text>
 			</view>
-			<view class="jd">校对 刘军</view>
+			<view class="jd">校对 {{newsProofread}}</view>
 		</view>
+
 		<view class="pt">
 			<view>
 				<image style="width: 20rpx; height: 20rpx;" src="../../static/logo.png"></image>
@@ -44,33 +49,20 @@
 				</view>
 			</view>
 			<view>
-				<image style="width: 200rpx;height: 150rpx; border-radius: 20rpx;" src="../../static/2.jpg">
+				<image style="width: 200rpx;height: 150rpx; border-radius: 20rpx;margin-left: 10rpx;"
+					src="../../static/2.jpg">
 				</image>
 			</view>
 		</view>
-		<view class="xws"></view>
-		<view class="xw">
-			<view>
-				<view>单节24分，5个球</view>
-				<view class="xwnr">
-					<view class="xwnrs">科技搜狐</view>
-					<view class="xwnrs">3434评</view>
-				</view>
-			</view>
-			<view>
-				<image style="width: 200rpx;height: 150rpx; border-radius: 20rpx;" src="../../static/2.jpg">
-				</image>
-			</view>
-		</view>
-		<view class="xws"></view>
-		<view class="xws"></view>
+
 		<view class="jc">
 			<view class="jcs">我来说两句</view>
 		</view>
+
 		<view style="color: #c5c5c5; margin-bottom: 30rpx; margin-left: 20rpx;">热门评论</view>
 		<view class="pl">
 			<view>
-				<image style="width: 80rpx; height: 80rpx;" src="../../static/2.jpg"></image>
+				<image style="width: 80rpx; height: 80rpx;border-radius: 50%;" src="../../static/2.jpg"></image>
 			</view>
 			<view class="lp">
 				<view class="pll">
@@ -87,66 +79,15 @@
 							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
 						</view>
 						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
+							<image style="width: 30rpx;height: 30rpx;" src="../../static/comment.png"></image>
 						</view>
 					</view>
 				</view>
 				<view class="pll">微笑生活，勇敢面对。</view>
 			</view>
 		</view>
-		<view class="pl">
-			<view>
-				<image style="width: 80rpx; height: 80rpx;" src="../../static/2.jpg"></image>
-			</view>
-			<view class="lp">
-				<view class="pll">
-					<view>
-						<view class="zt1">网友222222</view>
-						<view class="sj">
-							<view class="sjs">2小时钱</view>
-							<view class="sjs">河北石家庄</view>
-						</view>
-					</view>
-					<view class="pl">
-						<view class="plll">7</view>
-						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
-						</view>
-						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
-						</view>
-					</view>
-				</view>
-				<view class="pll">微笑生活，勇敢面对。</view>
-			</view>
-		</view>
-		<view class="pl">
-			<view>
-				<image style="width: 80rpx; height: 80rpx;" src="../../static/2.jpg"></image>
-			</view>
-			<view class="lp">
-				<view class="pll">
-					<view>
-						<view class="zt1">网友222222</view>
-						<view class="sj">
-							<view class="sjs">2小时钱</view>
-							<view class="sjs">河北石家庄</view>
-						</view>
-					</view>
-					<view class="pl">
-						<view class="plll">7</view>
-						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
-						</view>
-						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
-						</view>
-					</view>
-				</view>
-				<view class="pll">微笑生活，勇敢面对。</view>
-			</view>
-		</view>
-		<view class="xhx"></view>
+
+
 		<!--底部-->
 		<view class="zdb">
 			<view>
@@ -170,14 +111,44 @@
 	export default {
 		data() {
 			return {
-
+				id: "",
+				newstitle: "",
+				newsimage: "",
+				newscontent: "",
+				newsheat: "",
+				newssource: "",
+				newsheadimg: "",
+				newsicon: "",
+				newstime: "",
+				newsProofread: ""
 			}
 		},
 		onLoad(options) {
 			console.log(options.id)
+			this.getnewsId(options.id)
 		},
 		methods: {
-
+			getnewsId(_id) {
+				uniCloud.callFunction({
+					name: 'getNewsId',
+					data: {
+						"id": _id
+					},
+					success: (e) => {
+						console.log('新闻详情查找结果：' + e.result);
+						this.newstitle = e.result.data[0].newstitle;
+						this.newsimage = e.result.data[0].newsimage;
+						this.newscontent = e.result.data[0].newscontent;
+						this.newsheat = e.result.data[0].newsheat;
+						this.newssource = e.result.data[0].newssource;
+						this.newsheadimg = e.result.data[0].newsheadimg;
+						this.newsicon = e.result.data[0].newsicon;
+						this.newstime = e.result.data[0].newstime;
+						this.newsProofread = e.result.data[0].newsProofread;
+						// this.newname = e.result.data[0].newname,
+					}
+				})
+			}
 		}
 	}
 </script>
@@ -241,6 +212,7 @@
 	.tps {
 		width: 80rpx;
 		height: 80rpx;
+		border-radius: 50%;
 	}
 
 	.a {
@@ -267,7 +239,7 @@
 		width: 120rpx;
 		text-align: center;
 		margin-top: 30rpx;
-		margin-left: 280rpx;
+		margin-left: 100rpx;
 		font-size: 30rpx;
 	}
 
@@ -305,13 +277,8 @@
 	.xw {
 		display: flex;
 		flex-direction: row;
-		margin: 20rpx 20rpx 20rpx 20rpx;
-	}
-
-	.xws {
-		border-bottom: 1rpx solid #D0D0D0;
-		margin-top: 20rpx;
-		margin-bottom: 30rpx;
+		margin: 20rpx 20rpx 30rpx 5rpx;
+		border-bottom: 1px solid #d0d0d0;
 	}
 
 	.xwnr {
@@ -331,7 +298,8 @@
 		display: flex;
 		flex-direction: ;
 		margin-right: -300rpx;
-		margin-bottom: 40rpx;
+		margin-bottom: 80rpx;
+		border: 1px solid red;
 	}
 
 	.lp {
