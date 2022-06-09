@@ -348,37 +348,4 @@
 		height: 0;
 		color: transparent;
 	}
-
-	/*=========新闻列表========*/
-	.news_list {
-		margin: 200rpx 25rpx 25rpx 25rpx;
-		position: absolute;
-		padding-bottom: calc(var(--windeow-bottom));
-		width: 100%;
-	}
-
-	.news-item {
-		height: 150rpx;
-		border-bottom: 1rpx solid #C8C7CC;
-		display: flex;
-		flex-direction: row;
-		margin-bottom: 20rpx;
-	}
-
-	/*=========设置左边图片大小=========*/
-	.news_list image {
-		width: 180rpx;
-		height: 140rpx;
-		margin-right: 30rpx;
-	}
-
-	.news_list .title {
-		font-size: 35rpx;
-	}
-
-	.news_list .time {
-		color: #C0C0C0;
-		font-size: 30rpx;
-		margin-top: 15rpx;
-	}
 </style>

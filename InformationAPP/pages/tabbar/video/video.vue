@@ -2,153 +2,37 @@
 	<view>
 		<!-- 第一部分-顶部 -->
 		<view class="items">
+			<view class="item-xs">推荐</view>
 			<view class="item">
-				<view class="item-xs">推荐</view>
-				<view class="item-x">千里眼</view>
-				<view class="item-x">搞笑</view>
-				<view class="item-x">娱乐</view>
-				<view class="item-x">社会</view>
-				<view class="item-x">音乐</view>
-				<view class="item-x">科技</view>
+				<view class="item-x" v-for="(item,i) in videotitle" :key="i+'vdtitle'">{{item.videotitle}}</view>
 			</view>
 		</view>
-		<view class="item-ss"></view>
 
 		<!-- 第二部分-视频1 -->
-		<view class="sp">
-			<navigator url="../../videoinfo/videoinfo">
-				<view class="x">600斤的公牛不甘心被杀，宁愿跳进大海之中，结局令人遗憾</view>
-			</navigator>
-			<video class="y" style="width: 100%;height: 400rpx;" src="http://"></video>
+		<view class="sp" @click="videoinfo(item._id)" v-for="(item,i) in voidlist" :key="i+'video'">
+			<view class="sp_content">{{item.adcontent}}</view>
+			<video class="y" style="width: 100%;height: 400rpx;" :src="item.videosrc"></video>
+
 			<view class="dibu">
-				<view class="wenzi">
-					<view class="wenzizf">
-						<image style="width: 45rpx;height: 45rpx;" src="../../../static/2.jpg"></image>
+				<view class="dibu_left">
+					<view class="letf_image">
+						<image style="width: 60rpx;height: 60rpx;border-radius: 50%;" :src="item.vdimage"></image>
 					</view>
-					<view class="wenzizf" style="font-size: 32rpx;">开心哈哈大笑...</view>
-					<view class="wenzizf" style="color: #999999; margin-top: 0rpx;"></view>
-					<view class="wenzizf" style="font-size: 32rpx; color: #DD524D; font-weight: bold;">关注</view>
+					<view class="vdauthor" style="font-size: 32rpx;">{{item.vdauthor}}</view>
+					<view class="jg"></view>
+					<view class="followad" style="font-size: 32rpx; color: #DD524D; font-weight: bold;">关注</view>
 				</view>
-				<view class="tupian">
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
+				<view class="dibu_right">
+					<view class="dz">
+						<image style="width: 37rpx; height: 37rpx;" src="../../../static/comment.png"></image>
 					</view>
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
+					<view class="pl">
+						<image style="width: 40rpx; height: 40rpx;" src="../../../static/good.png"></image>
 					</view>
-					<view class="tupiandx" style="margin-top: -10rpx; padding-right: 20rpx;">...</view>
+					<view class="gd">···</view>
 				</view>
 			</view>
 		</view>
-
-		<!-- 第二部分-视频2 -->
-		<view class="sp">
-			<navigator url="../videocontent/videocontent">
-				<view class="x">这些箱子里装的是中高档卷烟共有1350余条,27万余支</view>
-			</navigator>
-			<video class="y" style="width: 100%;height: 400rpx;" src="http://"></video>
-			<view class="dibu">
-				<view class="wenzi">
-					<view class="wenzizf">
-						<image style="width: 45rpx;height: 45rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="wenzizf" style="font-size: 32rpx;">往事随风飘去...</view>
-					<view class="wenzizf" style="color: #999999; margin-top: 0rpx;"></view>
-					<view class="wenzizf" style="font-size: 32rpx; color: #DD524D; font-weight: bold;">关注</view>
-				</view>
-				<view class="tupian">
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx" style="margin-top: -10rpx; padding-right: 20rpx;">...</view>
-				</view>
-			</view>
-		</view>
-
-		<!-- 第二部分-视频3 -->
-		<view class="sp">
-			<navigator url="../videocontent/videocontent">
-				<view class="x">一个"背包客",从郑州坐火车往返江南某市.....</view>
-			</navigator>
-			<video class="y" style="width: 100%;height: 400rpx;" src="http://"></video>
-			<view class="dibu">
-				<view class="wenzi">
-					<view class="wenzizf">
-						<image style="width: 45rpx;height: 45rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="wenzizf" style="font-size: 32rpx;">微笑面对一切...</view>
-					<view class="wenzizf" style="color: #999999; margin-top: 0rpx;"></view>
-					<view class="wenzizf" style="font-size: 32rpx; color: #DD524D; font-weight: bold;">关注</view>
-				</view>
-				<view class="tupian">
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx" style="margin-top: -10rpx; padding-right: 20rpx;">...</view>
-				</view>
-			</view>
-		</view>
-
-		<!-- 第二部分-视频4 -->
-		<view class="sp">
-			<navigator url="../videocontent/videocontent">
-				<view class="x">原来,4月24日,该局执法人员奔赴江南某市，在江南某市火车站</view>
-			</navigator>
-			<video class="y" style="width: 100%;height: 400rpx;" src="http://"></video>
-			<view class="dibu">
-				<view class="wenzi">
-					<view class="wenzizf">
-						<image style="width: 45rpx;height: 45rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="wenzizf" style="font-size: 32rpx;">每天开开心心...</view>
-					<view class="wenzizf" style="color: #999999; margin-top: 0rpx;"></view>
-					<view class="wenzizf" style="font-size: 32rpx; color: #DD524D; font-weight: bold;">关注</view>
-				</view>
-				<view class="tupian">
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx" style="margin-top: -10rpx; padding-right: 20rpx;">...</view>
-				</view>
-			</view>
-		</view>
-
-		<!-- 第二部分-视频5 -->
-		<view class="sp">
-			<navigator url="../videocontent/videocontent">
-				<view class="x">新郑市烟草与公安部门顺藤摸瓜,连夜驱车奔赴江南某市</view>
-			</navigator>
-			<video class="y" style="width: 100%;height: 400rpx;" src="http://"></video>
-			<view class="dibu">
-				<view class="wenzi">
-					<view class="wenzizf">
-						<image style="width: 45rpx;height: 45rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="wenzizf" style="font-size: 32rpx;">一起来玩耍吧...</view>
-					<view class="wenzizf" style="color: #999999; margin-top: 0rpx;"></view>
-					<view class="wenzizf" style="font-size: 32rpx; color: #DD524D; font-weight: bold;">关注</view>
-				</view>
-				<view class="tupian">
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx">
-						<image style="width: 35rpx; height: 35rpx;" src="../../../static/2.jpg"></image>
-					</view>
-					<view class="tupiandx" style="margin-top: -10rpx; padding-right: 20rpx;">...</view>
-				</view>
-			</view>
-		</view>
-
 	</view>
 
 </template>
@@ -157,37 +41,93 @@
 	export default {
 		data() {
 			return {
-
+				videotitle: [],
+				voidlist: []
 			}
 		},
+		onLoad() {
+			this.getvideotitle();
+		},
+		onShow() {
+			this.getvideolist();
+		},
 		methods: {
-
+			getvideotitle() {
+				uniCloud.callFunction({
+					name: 'getVideotitle',
+					success: (e) => {
+						this.videotitle = e.result.data;
+					}
+				})
+			},
+			getvideolist() {
+				uniCloud.callFunction({
+					name: 'getVideolist',
+					success: (e) => {
+						this.voidlist = e.result.data;
+					}
+				})
+			},
+			videoinfo(_id) {
+				uni.navigateTo({
+					url: '../../videoinfo/videoinfo?id=' + _id
+				})
+			}
 		}
 	}
 </script>
 
 <style>
+	/* 顶部 */
 	.items {
-		background-color: #ffffff;
-		position: fixed;
-		z-index: 1;
-		width: 100%;
-		top: 90rpx;
-	}
-
-	.item {
 		background-color: #ffffff;
 		display: flex;
 		flex-direction: row;
-		margin: 5rpx 10rpx 20rpx 10rpx;
+		z-index: 1;
+		height: 70rpx;
+		width: 2000rpx;
+		top: 90rpx;
+		margin-bottom: 30rpx;
+		/* border: 1px solid red; */
+	}
+
+	.item {
+		height: 60rpx;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: row;
+		margin: 5rpx 10rpx 20rpx 0rpx;
 		font-size: 40rpx;
 		color: #333333;
 		margin-bottom: 20rpx;
+		border-bottom: 1rpx solid #C8C7CC;
+		/* border: 1px solid red; */
+
 	}
 
-	.item-ss {
-		width: 100%;
+	.item view {
+		margin-left: 22rpx;
+	}
+
+	.item-xs {
 		height: 60rpx;
+		margin: 5rpx 0rpx 0rpx 10rpx;
+		color: #DD524D;
+		font-size: 40rpx;
+		font-weight: bold;
+		border-bottom: 1rpx solid #C8C7CC;
+		/* border: 1px solid red; */
+	}
+
+	/* 视频 */
+	.sp {
+		border-bottom: 1rpx solid #e5eaf3;
+		margin: 20rpx 10rpx 20rpx 10rpx;
+		/* border: 1px solid red; */
+	}
+
+	.sp_content {
+		font-size: 35rpx;
 	}
 
 	.tab_title view {
@@ -197,185 +137,89 @@
 		color: #ffffff;
 	}
 
+	/* 视频作者 */
 	.dibu {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		-webkit-justify-content: space-between;
 		margin-top: 30rpx;
 		margin-bottom: 20rpx;
+		padding-bottom: 20rpx;
+		border-bottom: 1px solid #acacac;
+		/* border: 1px solid red; */
 	}
 
-	.wenzi {
-		display: flex;
-		flex-direction: row;
+	/* 左半边-头像-发布者-关注 */
+	.dibu_left {
+		display: inline-block;
+		height: 60rpx;
+		text-align: center;
+		line-height: 60rpx;
 	}
 
-	.tupian {
-		display: flex;
-		flex-direction: row;
+	.letf_image {
+		display: inline-block;
+		float: left;
 	}
 
-	.tupiandx {
-		margin-left: 60rpx;
-	}
-
-	.wenzizf {
-		margin-right: 20rpx;
-	}
-
-	.x {
-		margin-top: 30rpx;
-		margin-bottom: 30rpx;
-	}
-
-	.item-xs {
-		color: #DD524D;
-		font-weight: bold;
-	}
-
-	.a {
-		margin-right: 120rpx;
+	.vdauthor {
+		display: inline;
+		float: left;
+		width: 200rpx;
 		height: 50rpx;
-	}
-
-	.ap image {
-		width: 250rpx;
-		height: 100rpx;
-	}
-
-	.ap {
-		border-radius: 10rpx;
-		width: 250rpx;
-		height: 100rpx;
 		overflow: hidden;
-		margin: auto;
+		text-overflow: ellipsis;
+		margin-left: 20rpx;
+		padding-right: 20rpx;
+		/* border-right: 1px solid #757575; */
 	}
 
-	.b {}
-
-	.scroll_x {
-		height: 50rpx;
-		width: 100%;
-		white-space: nowrap;
+	.jg {
+		display: inline;
+		height: 38rpx;
+		float: left;
+		margin-top: 9rpx;
+		text-align: center;
+		border-right: 1px solid #757575;
 	}
 
-	.item {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		color: #333333;
-		background-color: #FFFFFF;
-		border-bottom: 1rpx solid #C8C7CC;
+	.followad {
+		display: inline;
+		float: left;
+		margin-left: 20rpx;
 	}
 
-	.tab_title {
-		display: inline-block;
-		margin-left: 10rpx;
-		height: 80rpx;
-		line-height: 70rpx;
-		color: #333333;
-		background-color: #FFFFFF;
-		border-bottom: 1rpx solid #C8C7CC;
-	}
-
-	.tab-x {
-		color: #333333;
-		background-color: #FFFFFF;
-	}
-
-	.scroll_x {
+	/* 右半部分-评论-点赞-更多 */
+	.dibu_right {
+		display: inline;
 		height: 60rpx;
-		width: 100%;
-		white-space: nowrap;
-	}
-
-	.gray {
-		color: #C8C7CC;
-	}
-
-	.gray1 {
-		color: #DD524D;
-	}
-
-	.hd {
-		display: inline-block;
-	}
-
-	.tab {
-		background-color: #DD524D;
-	}
-
-	.shgd {
-		position: fixed;
-		position: absolute;
-		z-index: 1;
-	}
-
-	scroll-view::-webkit-scrollbar {
-		display: none;
-		width: 0;
-		height: 0;
-		color: transparent;
-	}
-
-	.sp {
-		border-bottom: 1rpx solid #e5eaf3;
-		margin: 10rpx 10rpx 20rpx 20rpx;
-	}
-
-	.reg-right {
-		color: #DD524D;
+		float: right;
+		text-align: center;
+		line-height: 60rpx;
 		margin-right: 10rpx;
-		padding-left: 10rpx;
+		/* border: 1px solid red; */
 	}
 
-	.z {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-bottom: 30rpx;
-		margin-top: 20rpx;
-		height: 70rpx;
+	.dz {
+		display: inline;
+		margin-right: 60rpx;
+		/* border: 1px solid red; */
+		text-align: center;
+		line-height: 40rpx;
 	}
 
-	.zs {
-		display: flex;
+	.pl {
+		display: inline;
+		margin-right: 60rpx;
+		/* border: 1px solid red; */
+		text-align: center;
+		line-height: 40rpx;
 	}
 
-	.z1 {
-		margin-bottom: 10rpx;
-		margin-right: 300rpx;
-		margin-top: 20rpx;
-	}
-
-	.z-h {
-		height: 60rpx;
+	.gd {
+		display: inline;
+		/* border: 1px solid red; */
+		text-align: center;
+		line-height: 40rpx;
+		width: 40rpx;
+		height: 40rpx;
 		margin-right: 10rpx;
-		display: flex;
-		flex-direction: row;
-		font-size: 35rpx;
-	}
-
-	.z-z {
-		font-size: 30rpx;
-		color: #C8C7CC;
-	}
-
-	.z-z1 {
-		font-size: 30rpx;
-		color: #C8C7CC;
-		margin: 20rpx;
-	}
-
-	.z-z2 {
-		font-size: 30rpx;
-		color: #C8C7CC;
-		margin: 20rpx;
-	}
-
-	.y {
-		margin: 0rpx;
-		flex: 1;
 	}
 </style>

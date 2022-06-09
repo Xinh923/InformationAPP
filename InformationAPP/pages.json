@@ -3,51 +3,47 @@
 		{
 			"path": "pages/tabbar/news/news",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "新闻",
 				"enablePullDownRefresh": true
 			}
 
 		}, {
 			"path": "pages/tabbar/video/video",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "视频",
 				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/tabbar/topic/topic",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "话题",
 				"enablePullDownRefresh": false
 			}
 
 		}, {
 			"path": "pages/tabbar/my/my",
 			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/videoinfo/videoinfo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/newsinfo/newsinfo",
+			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
 		}
-	    ,{
-            "path" : "pages/videoinfo/videoinfo",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/newsinfo/newsinfo",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

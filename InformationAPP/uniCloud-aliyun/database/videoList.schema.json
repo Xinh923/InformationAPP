@@ -1,0 +1,58 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"videosrc": {
+			"bsonType": "string",
+			"title": "视频路径",
+			"description": "视频路径",
+			"trim": "both"
+		},
+		"vdauthor": {
+			"bsonType": "string",
+			"title": "视频作者",
+			"description": "视频作者",
+			"trim": "both"
+		},
+		"vdimage": {
+			"bsonType": "string",
+			"title": "作者头像",
+			"description": "作者头像",
+			"trim": "both"
+		},
+		"adnumber": {
+			"bsonType": "int",
+			"title": "视频播放量",
+			"description": "视频播放量",
+			"trim": "both"
+		},
+		"adcontent": {
+			"bsonType": "string",
+			"title": "视频介绍",
+			"description": "视频介绍",
+			"trim": "both"
+		},
+		"adpraise": {
+			"bsonType": "int",
+			"title": "视频点赞数",
+			"description": "视频点赞数",
+			"trim": "both"
+		},
+		"adtime": {
+			"bsonType": "string",
+			"title": "发布日期",
+			"description": "发布日期",
+			"trim": "both"
+		}
+	}
+}

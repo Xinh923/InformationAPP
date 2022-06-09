@@ -10,7 +10,7 @@
 		</view>
 		<view class="dhw">
 			<view>
-				<image class="tps" :src="newsheadimg" style="width: 110rpx; height: 110rpx;"></image>
+				<image class="tps" :src="newsheadimg" style="width: 100rpx; height: 100rpx;"></image>
 			</view>
 			<view>
 				<view class="zt">{{newssource}}</view>
@@ -19,7 +19,7 @@
 			<view v-bind:class="className" @click="gz()">{{follow}}</view>
 		</view>
 		<view class="items">
-			<view style="text-align: center;margin-top: 15px;margin-bottom: 15px;">
+			<view style="text-align: center;margin-top: 15px;margin-bottom: 15px;margin-left: -10rpx;">
 				<image style="width: 600rpx;height: 300rpx;" :src="newsimage">
 				</image>
 			</view>
@@ -61,30 +61,32 @@
 			<view class="jcs">我来说两句</view>
 		</view>
 		<view style="color: #c5c5c5; margin-bottom: 30rpx; margin-left: 20rpx;">热门评论</view>
-		<view class="pl" v-for="(item,i) in hotreview" :key="i+'hotview'">
-			<view class="lp">
-				<view class="pll">
-					<view style=" display: inline-block;">
-						<image style="width: 80rpx; height: 80rpx;border-radius: 50%;" :src="item.cmimage"></image>
-					</view>
-					<view style="margin-left: 20rpx;display: inline-block;">
-						<view class="zt1">{{item.cmname}}</view>
-						<view class="sj">
-							<view class="sjs">{{item.cmtime}}</view>
-							<view class="sjs">{{item.cmaddress}}</view>
+		<view style="margin-bottom: 100rpx;">
+			<view class="pl" v-for="(item,i) in hotreview" :key="i+'hotview'">
+				<view class="lp">
+					<view class="pll">
+						<view style=" display: inline-block;">
+							<image style="width: 80rpx; height: 80rpx;border-radius: 50%;" :src="item.cmimage"></image>
+						</view>
+						<view style="margin-left: 20rpx;display: inline-block;">
+							<view class="zt1">{{item.cmname}}</view>
+							<view class="sj">
+								<view class="sjs">{{item.cmtime}}</view>
+								<view class="sjs">{{item.cmaddress}}</view>
+							</view>
+						</view>
+						<view class="dz">
+							<view class="cmhot">{{item.cmhot}}</view>
+							<view class="plll">
+								<image src="../../static/good.png"></image>
+							</view>
+							<view class="plll">
+								<image src="../../static/comment.png"></image>
+							</view>
 						</view>
 					</view>
-					<view class="dz">
-						<view class="plll">{{item.cmhot}}</view>
-						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/good.png"></image>
-						</view>
-						<view class="plll">
-							<image style="width: 30rpx;height: 30rpx;" src="../../static/comment.png"></image>
-						</view>
-					</view>
+					<view class="plcontent">{{item.cmcontent}}</view>
 				</view>
-				<view class="plcontent">{{item.cmcontent}}</view>
 			</view>
 		</view>
 
@@ -364,18 +366,36 @@
 	}
 
 	.plll {
+		height: 40rpx;
 		display: inline-block;
-		margin-right: 60rpx;
-		width: 30rpx;
-		line-height: 30rpx;
+		margin-right: 50rpx;
+		width: 40rpx;
+		line-height: 40rpx;
 		text-align: center;
 		color: #999999;
+	}
+
+	.plll image {
+		width: 35rpx;
+		height: 35rpx;
+	}
+
+	.cmhot {
+		display: inline-block;
+		height: 35rpx;
+		display: inline-block;
+		margin-right: 50rpx;
+		width: 35rpx;
+		line-height: 35rpx;
+		text-align: center;
+		float: left;
+		font-size: 16px;
 	}
 
 	.dz {
 		float: right;
 		margin-top: 10rpx;
-		margin-right: 10rpx;
+		margin-right: 0rpx;
 		display: inline-block;
 	}
 
