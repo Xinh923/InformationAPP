@@ -12,11 +12,6 @@
 			</view>
 		</view>
 
-		<view class="three">
-			<view class="three-s">
-				为您更新了7条内容
-			</view>
-		</view>
 		<!-- 天气部分 -->
 		<view class="twos">
 			<view class="twoss">
@@ -245,10 +240,6 @@
 		width: 100%;
 		height: 120rpx;
 		background-color: #DD524D;
-	}
-
-	.three-s {
-		color: #FFFFFF;
 	}
 
 	.d-three {

@@ -61,7 +61,7 @@
 			<view class="jcs">我来说两句</view>
 		</view>
 		<view style="color: #c5c5c5; margin-bottom: 30rpx; margin-left: 20rpx;">热门评论</view>
-		<view style="margin-bottom: 100rpx;">
+		<view style="margin-bottom: 50rpx;">
 			<view class="pl" v-for="(item,i) in hotreview" :key="i+'hotview'">
 				<view class="lp">
 					<view class="pll">
@@ -90,17 +90,20 @@
 			</view>
 		</view>
 
+		<view class="xhx"></view>
+		<view class="jz">已加载全部</view>
+		<view class="xhxx"></view>
 		<!--底部-->
 		<view class="zdb">
-			<view>
-				<input type="text" style="width: 200rpx; margin-right: 20rpx;
+			<view style="padding-left: 50rpx;margin-top: 5rpx;">
+				<input type="text" style="width: 200rpx; 
 				font-size: 25rpx;" placeholder="有和观点" class="search_input"></input>
 			</view>
-			<view class="jl">
+			<view style="margin-left: 90rpx;margin-top: 5rpx;">
 				<image style="width: 40rpx; height: 40rpx;" src="../../static/comment.png"></image>
 			</view>
-			<view class="jl">
-				<image style="width: 40rpx; height: 40rpx;" src="../../static/clloection.png"></image>
+			<view style="margin-left: 70rpx;">
+				<image style="width: 45rpx; height: 45rpx;" src="../../static/clloection.png"></image>
 			</view>
 			<view class="jl">
 				<image style="width: 40rpx; height: 40rpx;" src="../../static/share.png"></image>
@@ -322,7 +325,7 @@
 
 	.jz {
 		color: #c0c0c0;
-		margin-left: 110rpx;
+		text-align: center;
 		margin-bottom: 80rpx;
 	}
 
@@ -334,15 +337,11 @@
 		background-color: #FFFFFF;
 		width: 100%;
 		height: 60rpx;
-	}
-
-	.left {
-		height: 10rpx;
-		margin-left: 20rpx;
+		margin-left: -15rpx;
 	}
 
 	.search_input {
-		background-color: #F8F8F8;
+		background-color: #dfdfdf;
 		border-radius: 40rpx;
 		padding: 5rpx 30rpx 6rpx 30rpx;
 		margin-right: 1rpx;
@@ -350,6 +349,7 @@
 
 	.jl {
 		margin-left: 70rpx;
+		margin-top: 5rpx;
 	}
 
 	/* 评论区内容 */
@@ -424,7 +424,24 @@
 		margin: 4rpx 70rpx 30rpx 100rpx;
 	}
 
-	/* 评论框 */
+	.xhx {
+		border-bottom: 1rpx solid #c0c0c0;
+		margin: 0rpx 20rpx 20rpx 10rpx;
+	}
+
+	.xhxx {
+		border-bottom: 1rpx solid #d5d5d5;
+		margin: 0rpx 20rpx 20rpx 10rpx;
+		margin-bottom: 20rpx;
+	}
+
+	.jz {
+		color: #C0c0c0;
+		margin-left: 20rpx;
+		margin-bottom: 80rpx;
+	}
+
+	/* 关注选择 */
 	.check_class {
 		background: #A3A3A3;
 		height: 45rpx;
