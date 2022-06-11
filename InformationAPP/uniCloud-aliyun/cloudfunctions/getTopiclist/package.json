@@ -1,0 +1,7 @@
+{
+  "name": "getTopiclist",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

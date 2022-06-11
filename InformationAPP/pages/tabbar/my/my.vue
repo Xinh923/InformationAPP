@@ -4,8 +4,8 @@
 			<view class="item1">
 				<image class="tx" style="width: 130rpx;height: 130rpx;" src="../../../static/user.png"></image>
 				<view class="item2">
-					<view class="item3">HI~欢迎回来</view>
-					<view class="item4"><text class="itemz">登录</text></view>
+					<view class="item3">HI~{{nkname}}</view>
+					<view class="item4" @click="login()"><text class="itemz">登录</text></view>
 				</view>
 			</view>
 			<view class="er1">
@@ -62,11 +62,19 @@
 	export default {
 		data() {
 			return {
-
+				nkname: ""
 			}
 		},
+		onLoad(option) {
+			console.log(option)
+			this.nkname = option.nickname;
+		},
 		methods: {
-
+			login() {
+				uni.navigateTo({
+					url: '../../myinfo/login/login'
+				})
+			}
 		}
 	}
 </script>

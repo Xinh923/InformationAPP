@@ -13,22 +13,23 @@
 				<navigator url="../oppinions/oppinions">
 					<view class="item-x">观点榜</view>
 				</navigator>
-				<image class="item-y" style="width: 35rpx;height: 35rpx;" src="../../../static/dianzan.png"></image>
+				<view class="left">
+					<input type="text" @input="searchNews" style="width: 180rpx;margin-right: 20rpx;font-size: 30rpx;"
+						placeholder="搜索关键词" class="search_input"></input>
+				</view>
 
 			</view>
 		</view>
 		<view class="bt"></view>
 		<!-- 话题1 -->
-		<view class="ht">
+		<view class="ht" v-for="(item,i) in topiclist" :key="i+'topic'">
 			<view>
-				<image class="a" src="../../../static/33.png"></image>
+				<image class="a" src="../../../static/footmark.png"></image>
 			</view>
 			<view class="hts">
-				<view class="b"> <text class="item-xx">曼联客场不败场次在英超排名第二，阿森纳27次客场不败</text></view>
+				<view class="b"> <text class="item-xx">{{item.topictitle}}</text></view>
 				<view class="c">
-					曼联客场对阵阿斯顿维拉，这场比赛的结果对于现阶段的受联来说影响并不是很大，但如果一旦曼联输球，
-					他们的同城死敌曼城就将提前加冕本赛季的英超冠军。在这样的大背景下曼联众将士自然是不愿意间接助攻死敌夺冠，
-					因此在上半场落后的情况下，曼联在下半场发起反扑，最终红魔以3-1的比分战胜了对手。
+					{{item.topiccontent}}
 				</view>
 				<view class="d">
 					<view class="hotimage">
@@ -40,38 +41,41 @@
 					</view>
 					<!-- 新闻1 -->
 					<view class="hotimage-x">
-						119观点
+						{{item.viewpoint}}观点
+					</view>
+					<view v-if="item.isdisplayhot===true" class="hotimage-y">
+						{{item.ishot}}
 					</view>
 				</view>
 			</view>
 		</view>
-		<!-- 话题2 -->
-		<view class="ht">
-			<view>
-				<image class="a" style="width: 30rpx;height: 30rpx; " src="../../../static/33.png"></image>
-			</view>
-			<view class="hts">
-				<view class="b"> <text class="item-xx">#司机为救婴儿闯红灯#</text></view>
-				<view class="c">网红约司机为救婴儿连闯3红灯，警察查实后取消处罚。</view>
-				<view class="d">
-					<view class="hotimage">
-						<image class="img1" src="../../../static/33.png"></image>
-						<image class="img2" src="../../../static/33.png"></image>
-						<image class="img3" src="../../../static/33.png"></image>
-						<image class="img4" src="../../../static/33.png"></image>
-					</view>
-					<!-- 新闻1 -->
-					<view class="hotimage-x">
-						1419观点
-					</view>
-					<view class="hotimage-y">
-						热
-					</view>
-				</view>
-			</view>
-		</view>
+
 	</view>
 </template>
+
+<script>
+	export default {
+		data() {
+			return {
+				topiclist: [],
+				ishot: true
+			}
+		},
+		onShow() {
+			this.gettopiclist();
+		},
+		methods: {
+			gettopiclist() {
+				uniCloud.callFunction({
+					name: 'getTopiclist',
+					success: (e) => {
+						this.topiclist = e.result.data;
+					}
+				})
+			}
+		}
+	}
+</script>
 
 <style>
 	.hotimage {
@@ -87,6 +91,7 @@
 	.hotimage image {
 		width: 30rpx;
 		height: 30rpx;
+		border-radius: 50%;
 		position: absolute;
 	}
 
@@ -125,7 +130,7 @@
 
 	.bt {
 		width: 100rpx;
-		height: 70rpx;
+		height: 10rpx;
 	}
 
 	.item {
@@ -149,6 +154,17 @@
 	}
 
 	.hotimage-y {
+		border: 1rpx solid #DD524D;
+		width: 30rpx;
+		text-align: center;
+		color: #DD524D;
+		border-radius: 10rpx;
+		font-size: 17rpx;
+		height: 32rpx;
+	}
+
+	.hotimage-y1 {
+		display: none;
 		border: 1rpx solid #DD524D;
 		width: 30rpx;
 		text-align: center;
@@ -194,5 +210,14 @@
 		flex-direction: row;
 		white-space: nowrap;
 		margin-top: 13rpx;
+	}
+
+	.search_input {
+		background-color: #ececec;
+		border-radius: 40rpx;
+		padding: 5rpx 30rpx 6rpx 30rpx;
+		margin-right: 1rpx;
+		color: #808080;
+		/* text-align: center; */
 	}
 </style>

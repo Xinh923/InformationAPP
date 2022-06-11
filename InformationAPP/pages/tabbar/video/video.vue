@@ -9,10 +9,10 @@
 		</view>
 
 		<!-- 第二部分-视频1 -->
-		<view class="sp" @click="videoinfo(item._id)" v-for="(item,i) in voidlist" :key="i+'video'">
+		<view class="sp" v-for="(item,i) in voidlist" :key="i+'video'">
 			<view class="sp_content">{{item.adcontent}}</view>
-			<video class="y" style="width: 100%;height: 400rpx;" :src="item.videosrc"></video>
-
+			<video @click="videoinfo(item._id)" class="y" style="width: 100%;height: 400rpx;"
+				:src="item.videosrc"></video>
 			<view class="dibu">
 				<view class="dibu_left">
 					<view class="letf_image">
@@ -193,7 +193,7 @@
 		float: right;
 		text-align: center;
 		line-height: 60rpx;
-		margin-right: 10rpx;
+		margin-right: 20rpx;
 		/* border: 1px solid red; */
 	}
 
@@ -201,25 +201,24 @@
 		display: inline;
 		margin-right: 60rpx;
 		/* border: 1px solid red; */
-		text-align: center;
-		line-height: 40rpx;
+		float: left;
+		margin-top: 9rpx;
 	}
 
 	.pl {
 		display: inline;
+		float: left;
+		margin-top: 9rpx;
 		margin-right: 60rpx;
 		/* border: 1px solid red; */
-		text-align: center;
-		line-height: 40rpx;
 	}
 
 	.gd {
 		display: inline;
-		/* border: 1px solid red; */
-		text-align: center;
-		line-height: 40rpx;
+		float: right;
 		width: 40rpx;
 		height: 40rpx;
-		margin-right: 10rpx;
+		margin-right: 15rpx;
+		margin-bottom: 2rpx;
 	}
 </style>

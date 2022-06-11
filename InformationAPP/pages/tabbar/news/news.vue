@@ -11,7 +11,11 @@
 				</scroll-view>
 			</view>
 		</view>
-
+		<view class="three">
+			<view class="three-s">
+				为您更新了7条内容
+			</view>
+		</view>
 		<!-- 天气部分 -->
 		<view class="twos">
 			<view class="twoss">
@@ -120,6 +124,16 @@
 			this.sendGetWeather();
 			this.getnewslist();
 			this.getad();
+		},
+		onPullDownRefresh() {
+			uni.showToast({
+				title: '已为您更新资讯',
+				icon: "success",
+				duration: 2500
+			});
+			setTimeout(function() {
+				uni.stopPullDownRefresh();
+			}, 2000);
 		},
 		methods: {
 			// 获取顶部导航栏

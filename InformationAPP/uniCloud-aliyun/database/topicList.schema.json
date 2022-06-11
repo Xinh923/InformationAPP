@@ -1,0 +1,46 @@
+// 文档教程: https://uniapp.dcloud.net.cn/uniCloud/schema
+{
+	"bsonType": "object",
+	"required": [],
+	"permission": {
+		"read": false,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"topictitle": {
+			"bsonType": "string",
+			"title": "话题标题",
+			"description": "话题标题",
+			"trim": "both"
+		},
+		"topiccontent": {
+			"bsonType": "string",
+			"title": "话题内容",
+			"description": "话题内容",
+			"trim": "both"
+		},
+		"viewpoint": {
+			"bsonType": "int",
+			"title": "观点数",
+			"description": "观点数",
+			"trim": "both"
+		},
+		"ishot": {
+			"bsonType": "string",
+			"title": "是否为热点",
+			"description": "是否为热点",
+			"trim": "both"
+		},
+		"isdisplayhot": {
+			"bsonType": "bool",
+			"title": "是否显示热点",
+			"description": "是否显示热点",
+			"trim": "both"
+		}
+	}
+}

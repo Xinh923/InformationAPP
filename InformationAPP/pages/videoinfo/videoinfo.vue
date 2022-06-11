@@ -49,7 +49,7 @@
 				<!--第四部分-1-->
 				<view class="e-item" v-for="(item,i) in videolist.slice(4)" :key="i+'videolist'">
 					<view class="e">
-						<video style="width: 200rpx;height: 200rpx;" :src="item.videosrc"></video>
+						<video style="width: 200rpx;height: 200rpx;z-index: 0;" :src="item.videosrc"></video>
 					</view>
 					<view style="height: 200rpx;margin-top: 30rpx;margin-left: 15rpx;">
 						<view style="font-size: 35rpx;height: 135rpx;text-overflow: ellipsis;overflow: hidden;">
