@@ -1,0 +1,884 @@
+{
+    "ad": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "629f260e3c4147000105fe92"
+                },
+                "adtilte": "地主家女儿体弱多病，家人冲喜给她买了小夫君",
+                "adimage1": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/d04d5b6b-adc2-4d9d-9630-e9ed002a39f3.PNG",
+                "adimage2": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/6baea725-9a98-4787-a2bd-9e93f3ad8525.PNG",
+                "adimage3": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/796c000a-8538-42b8-8b87-8780ad81c56c.PNG",
+                "adsource": "免费小说精选"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "adtilte": {
+                    "bsonType": "string",
+                    "title": "广告标题",
+                    "description": "广告标题",
+                    "trim": "both"
+                },
+                "adimage1": {
+                    "bsonType": "string",
+                    "title": "广告图片1",
+                    "description": "广告图片1",
+                    "trim": "both"
+                },
+                "adimage2": {
+                    "bsonType": "string",
+                    "title": "广告图片2",
+                    "description": "广告图片2",
+                    "trim": "both"
+                },
+                "adimage3": {
+                    "bsonType": "string",
+                    "title": "广告图片3",
+                    "description": "广告图片3",
+                    "trim": "both"
+                },
+                "adsource": {
+                    "bsonType": "string",
+                    "title": "广告来源",
+                    "description": "广告来源",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "hotNews": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "62a0872af17d020001ae3315"
+                },
+                "hottitle": "勇士G3库汤追冲历史第一神迹！库里或狂刷29项纪录：连超多位绿军名宿",
+                "hotimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/6c86e1b7-7014-43fa-8b02-4bd7bbc92712.jpg",
+                "hotsource": "腾讯体育",
+                "heat": "1680"
+            },
+            {
+                "_id": {
+                    "$oid": "62a087340cb5d50001d133b9"
+                },
+                "hottitle": "闹大了！FIFA下达最后通牒，中国足协13号前不履行处罚将全球禁赛",
+                "hotimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/59308902-14fb-42e9-9c4c-f0c9da3df039.jpg",
+                "hotsource": "腾讯体育",
+                "heat": "1106"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "hottitle": {
+                    "bsonType": "string",
+                    "title": "热门标题",
+                    "description": "热门标题",
+                    "trim": "both"
+                },
+                "hotimage": {
+                    "bsonType": "string",
+                    "title": "热门新闻图片",
+                    "description": "热门新闻图片",
+                    "trim": "both"
+                },
+                "hotsource": {
+                    "bsonType": "string",
+                    "title": "热门来源",
+                    "description": "热门来源",
+                    "trim": "both"
+                },
+                "heat": {
+                    "bsonType": "int",
+                    "title": "新闻热度",
+                    "description": "新闻热度",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "hotReview": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "62a0a4863c414700014fa2bd"
+                },
+                "cmimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/d4921fa1-3786-4b29-8b85-0fc2573c321b.jpg",
+                "cmname": "啵啵味的橙味仙草",
+                "cmtime": "50分钟前",
+                "cmaddress": "福建福州",
+                "cmhot": 13,
+                "cmcontent": "这新闻资讯质量确实不错，很棒！",
+                "cmdz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png"
+            },
+            {
+                "_id": {
+                    "$oid": "62a0a495302d9f0001cc713c"
+                },
+                "cmimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/95044530-10cb-4b6b-aab9-935130c15429.jpg",
+                "cmname": "港岛区日记",
+                "cmtime": "36分钟前",
+                "cmaddress": "浙江杭州",
+                "cmhot": 7,
+                "cmcontent": "每天第一时间前来了解最新新闻资讯",
+                "cmdz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png"
+            },
+            {
+                "_id": {
+                    "$oid": "62a0a4b69b54e300012a8eee"
+                },
+                "cmimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/a66c2e7f-2f88-4211-bb5c-ff6986d54188.jpg",
+                "cmname": "沐雨橙风",
+                "cmtime": "6-8 16:13",
+                "cmaddress": "广东深圳",
+                "cmhot": 17,
+                "cmcontent": "真不错！第一时间就能了解最新的新闻资讯~",
+                "cmdz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "cmimage": {
+                    "bsonType": "string",
+                    "title": "评论用户头像",
+                    "description": "评论用户头像",
+                    "trim": "both"
+                },
+                "cmname": {
+                    "bsonType": "string",
+                    "title": "评论用户昵称",
+                    "description": "评论用户昵称",
+                    "trim": "both"
+                },
+                "cmtime": {
+                    "bsonType": "string",
+                    "title": "评论时间",
+                    "description": "评论时间",
+                    "trim": "both"
+                },
+                "cmaddress": {
+                    "bsonType": "string",
+                    "title": "评论用户地址",
+                    "description": "评论用户地址",
+                    "trim": "both"
+                },
+                "cmhot": {
+                    "bsonType": "int",
+                    "title": "点赞数",
+                    "description": "点赞数",
+                    "trim": "both"
+                },
+                "cmdz": {
+                    "bsonType": "string",
+                    "title": "点赞图标",
+                    "description": "点赞图标",
+                    "trim": "both"
+                },
+                "cmcontent": {
+                    "bsonType": "string",
+                    "title": "评论内容",
+                    "description": "评论内容",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "newsTitle": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "628f2b5ac9881500019fced8"
+                },
+                "titlename": "要闻"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2b9a5e068d0001e19cc7"
+                },
+                "titlename": "推荐"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2bc45c1f6c0001993052"
+                },
+                "titlename": "关注流"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2bdafd3e320001e1ea93"
+                },
+                "titlename": "24小时"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2c27f17d020001d1bc6a"
+                },
+                "titlename": "娱乐"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2c360cb5d50001f3b518"
+                },
+                "titlename": "泉州"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2c452f77c40001b02cc6"
+                },
+                "titlename": "财经"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2c53f7929900016b29c3"
+                },
+                "titlename": "生活"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2cc47a1d270001358906"
+                },
+                "titlename": "科技"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2cd41341c70001d519b5"
+                },
+                "titlename": "军事"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2cf25e068d0001e1c500"
+                },
+                "titlename": "体育"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2cfe00a7600001817128"
+                },
+                "titlename": "汽修"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2d09cc12f400017fe3bf"
+                },
+                "titlename": "健康"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2d15996ab20001a3fff4"
+                },
+                "titlename": "国际"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2d2166ea6e000181b646"
+                },
+                "titlename": "千里眼"
+            },
+            {
+                "_id": {
+                    "$oid": "628f2d3ac988150001a00f9f"
+                },
+                "titlename": "5G"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "titlename": {
+                    "bsonType": "string",
+                    "title": "新闻二级标题",
+                    "description": "新闻标题",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "newslist": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "629ecf167696a8000127c5f3"
+                },
+                "newstitle": "女足国脚王霜当选湖北足协副会长",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/4415c766-c64e-434d-9500-81eb8f11ec43.jpg",
+                "newscontent": "新京报讯 据央视网体育报道，6月6日，湖北省足球协会第四届一次会员代表大会在洪山宾馆召开。湖北省体育局党组书记、局长水兵当选新一届省足协会长，女足国脚王霜等8人当选副会长，会议同时选出了由35人组成的新一届理事会。",
+                "newsheat": "27",
+                "newssource": "新京报",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/457df258-5f3f-472b-b2f0-4cecaca222a7.JPG",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/007b8395-2f22-4aaa-bf7a-5f0107c9f3a2.png",
+                "newstime": "2022/06/07 07:00",
+                "newsProofread": "新辉"
+            },
+            {
+                "_id": {
+                    "$oid": "629ed4628c195b000193b7b6"
+                },
+                "newstitle": "1-1爆冷！法国连续2轮不胜，格列兹曼失空门，1.6亿巨星亮了",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/886304aa-6336-4daa-b02b-63fea9ef4519.jpg",
+                "newscontent": "北京时间6月7日凌晨，欧国联A级别A组第2轮，卫冕冠军来到法国，对阵曾经的手下败将克罗地亚。上半场，恩昆库进球被吹掉，下半场拉比奥单刀破门，克拉马里奇点球扳平比分，格列兹曼空门不进，法国爆冷1-1战平克罗地亚，连续2轮不胜。",
+                "newsheat": "25",
+                "newssource": "腾讯网",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/e9e5283c-660a-4a2e-8b56-3deab5f37a17.png",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/283c2611-681f-4e13-bd24-0b4ceba969a5.JPG",
+                "newstime": "2022/06/07 07:00",
+                "newsProofread": "新辉"
+            },
+            {
+                "_id": {
+                    "$oid": "629efbf72f77c400013d4896"
+                },
+                "newstitle": "俄媒：拜登宣布美国进入能源紧急状态，并继续“甩锅”俄罗斯",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/9120b9c0-6bef-408a-8036-a68bcf386d48.jpg",
+                "newscontent": "“拜登将另一场危机归咎于俄罗斯，”据“今日俄罗斯”(RT)报道，美国总统拜登6日宣布美国进入能源紧急状态，称潜在的电力供应短缺已经危及到美国的国家安全和生活质量。RT称，拜登将出现这一危机的部分原因归咎于俄罗斯。",
+                "newsheat": "6",
+                "newssource": "腾讯网",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/e9e5283c-660a-4a2e-8b56-3deab5f37a17.png",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/283c2611-681f-4e13-bd24-0b4ceba969a5.JPG",
+                "newstime": "2022/06/07 09:10",
+                "newsProofread": "新辉"
+            },
+            {
+                "_id": {
+                    "$oid": "629eff2e0cb5d500017f681b"
+                },
+                "newstitle": "九部门：严肃查处医疗机构工作人员利用职务、身份之便直播带货",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/761bb0c4-4c93-45ea-8584-fdd5d64ac7e0.jpg",
+                "newscontent": "国家卫健委网站消息，国家卫生健康委、工业和信息化部、公安部、财政部、商务部、国家税务总局、国家市场监督管理总局、国家医疗保障局、国家中医药管理局联合印发《2022年纠正医药购销领域和医疗服务中不正之风工作要点》，其中提出，进一步规范医疗行为促进合理医疗检查，落实医疗机构检查检验结果互认管理办法，提高医疗资源利用率，减轻人民群众就医负担，保障医疗质量和安全。加强医疗机构药事管理促进合理用药，规范发展药学服务，提升药学服务水平，落实优先采购使用集中带量采购中选产品政策，防范医疗机构和医务人员使用高价非集采或集采非中选产品替代集采中选产品。严肃查处医疗机构工作人员利用职务、身份之便直播带货。",
+                "newsheat": "13",
+                "newssource": "央视网",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/2811d022-098f-4fb0-8b17-f3d95967864b.jpg",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/9f0a5bd0-e9d0-48de-911b-ade338c9bbbf.png",
+                "newstime": "2022/06/08 08:00",
+                "newsProofread": "新辉"
+            },
+            {
+                "_id": {
+                    "$oid": "629effda00a76000010cfa1e"
+                },
+                "newstitle": "神舟十四号飞船成功发射，这些故事值得铭记",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/cfc059db-af3c-451b-afa2-4b698582087f.jpg",
+                "newscontent": "6月6日午间，随着天舟四号货物舱舱门成功开启，神舟十四号飞行乘组航天员为期6个月的在轨驻留也正式拉开大幕。后续，他们将开展空间站平台维护与照料、机械臂操作、出舱活动、舱段转移等工作以及空间科学实验、技术试验，堪称“最忙太空出差三人组”。回顾此次神舟十四号飞船的成功发射，都有哪些令人感动的瞬间？又有怎样的故事值得铭记？跟随记者的视角，一同重温发射背后的故事。",
+                "newsheat": "16",
+                "newssource": "央视网",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/2811d022-098f-4fb0-8b17-f3d95967864b.jpg",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/9f0a5bd0-e9d0-48de-911b-ade338c9bbbf.png",
+                "newstime": "2022/06/06 07:00",
+                "newsProofread": "新辉"
+            },
+            {
+                "_id": {
+                    "$oid": "629f2edef17d020001689342"
+                },
+                "newstitle": "BBC记者问如何看待美英向乌提供多管火箭炮系统 俄外长火力全开",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/cb01d8d0-b483-4666-a5d2-fff4d6f52431.jpg",
+                "newscontent": "俄罗斯外交部长拉夫罗夫6日以线上形式召开记者会。综合俄罗斯《消息报》、“今日俄罗斯”电视台（RT）等媒体报道，在当天的记者会上，英国广播公司（BBC）记者询问拉夫罗夫如何看待美英宣布向乌克兰提供多管火箭炮系统时，拉夫罗夫对此进行一连串批驳，他表示，“你们提供的武器射程越远，我们就会将新纳粹分子可能威胁到俄罗斯的战线推得（离我们）越远”。",
+                "newsheat": "9",
+                "newssource": "凤凰资讯",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/69f85448-72a0-4aa4-8e9a-674b7e8bd797.JPG",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/4177c550-47ed-4073-a057-16ec26dbee1a.png",
+                "newstime": "2022/06/07 12:10",
+                "newsProofread": "新辉"
+            },
+            {
+                "_id": {
+                    "$oid": "629f2ee2f79299000101e223"
+                },
+                "newstitle": "北约三国关闭领空阻挠出访行程，俄外长：难以置信，手段最低劣",
+                "newsimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/82f38a7a-0443-455f-83a2-0c9ea3340b2e.jpg",
+                "newscontent": "今日俄罗斯电视台（RT）6月6日报道称，俄罗斯外交部长拉夫罗夫严厉抨击北约和欧盟使用“最低劣手段”向其他国家施压。此前，保加利亚、北马其顿和黑山拒绝他乘坐的飞机经过其领空飞抵塞尔维亚，俄外长访问塞尔维亚的行程因此被迫取消。",
+                "newsheat": "10",
+                "newssource": "腾讯网",
+                "newsheadimg": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/e9e5283c-660a-4a2e-8b56-3deab5f37a17.png",
+                "newsicon": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/283c2611-681f-4e13-bd24-0b4ceba969a5.JPG",
+                "newstime": "2022/06/07 10:00",
+                "newsProofread": "新辉"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "newsicon": {
+                    "bsonType": "string",
+                    "title": "新闻图标",
+                    "description": "新闻图标",
+                    "trim": "both"
+                },
+                "newstitle": {
+                    "bsonType": "string",
+                    "title": "新闻标题",
+                    "description": "新闻标题",
+                    "trim": "both"
+                },
+                "newsheadimg": {
+                    "bsonType": "string",
+                    "title": "作者头像",
+                    "description": "作者头像",
+                    "trim": "both"
+                },
+                "newscontent": {
+                    "bsonType": "string",
+                    "title": "新闻内容",
+                    "description": "新闻内容",
+                    "trim": "both"
+                },
+                "newsimage": {
+                    "bsonType": "string",
+                    "title": "新闻配图",
+                    "description": "新闻配图",
+                    "trim": "both"
+                },
+                "newssource": {
+                    "bsonType": "string",
+                    "title": "新闻来源",
+                    "description": "新闻来源",
+                    "trim": "both"
+                },
+                "newstime": {
+                    "bsonType": "string",
+                    "title": "新闻发布时间",
+                    "description": "新闻发布时间",
+                    "trim": "both"
+                },
+                "newsheat": {
+                    "bsonType": "int",
+                    "title": "新闻热度",
+                    "description": "新闻热度",
+                    "trim": "both"
+                },
+                "newsProofread": {
+                    "bsonType": "string",
+                    "title": "新闻校对",
+                    "description": "新闻校对",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "topicList": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "62a489637a1d270001721d4d"
+                },
+                "topictitle": "#被打女性说不认识嫌疑人#",
+                "topiccontent": "报警人李女士目击了打人事件。6月11日下午，李女士向南方周末记者讲述了她所了解的事发经过。李女士回忆店主问了黑衣的这个女孩，和打人者认不认识，黑衣女孩说，不认识。",
+                "viewpoint": "999+",
+                "ishot": "热",
+                "isdisplayhot": true
+            },
+            {
+                "_id": {
+                    "$oid": "62a489fcd5771c00015fca60"
+                },
+                "topictitle": "#唐山打人事件9人全部落网#",
+                "topiccontent": "河北唐山烧烤店打人案件最后一名外省籍涉案人员，已在江苏被抓获。目前，唐山打人事件9人全部落网。",
+                "viewpoint": "999+",
+                "ishot": "热",
+                "isdisplayhot": true
+            },
+            {
+                "_id": {
+                    "$oid": "62a48ab91341c700011260b2"
+                },
+                "topictitle": "#福建的雨下到网友崩溃#",
+                "topiccontent": "据中国天气，明天起至14日，南方新一轮强降雨无缝衔接，湖南、江西、福建、广东等地还将有大到暴雨，局地有大暴雨。",
+                "viewpoint": "518",
+                "ishot": "",
+                "isdisplayhot": false
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "topictitle": {
+                    "bsonType": "string",
+                    "title": "话题标题",
+                    "description": "话题标题",
+                    "trim": "both"
+                },
+                "topiccontent": {
+                    "bsonType": "string",
+                    "title": "话题内容",
+                    "description": "话题内容",
+                    "trim": "both"
+                },
+                "viewpoint": {
+                    "bsonType": "int",
+                    "title": "观点数",
+                    "description": "观点数",
+                    "trim": "both"
+                },
+                "ishot": {
+                    "bsonType": "string",
+                    "title": "是否为热点",
+                    "description": "是否为热点",
+                    "trim": "both"
+                },
+                "isdisplayhot": {
+                    "bsonType": "bool",
+                    "title": "是否显示热点",
+                    "description": "是否显示热点",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "user": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "62a866d700a760000116e640"
+                },
+                "username": "888",
+                "password": "888",
+                "nickname": "新辉",
+                "mobile": "123456789"
+            },
+            {
+                "_id": {
+                    "$oid": "62a8678bb717e80001920a50"
+                },
+                "username": "999",
+                "password": "999",
+                "nickname": "新辉",
+                "mobile": "123456789"
+            },
+            {
+                "_id": {
+                    "$oid": "62a979cf00a76000012dd5c3"
+                },
+                "username": "123",
+                "password": "123",
+                "nickname": "新辉",
+                "mobile": "123456789"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "userimage": {
+                    "bsonType": "string",
+                    "title": "用户头像",
+                    "description": "用户头像",
+                    "trim": "both"
+                },
+                "userid": {
+                    "bsonType": "string",
+                    "title": "用户名",
+                    "description": "用户名",
+                    "trim": "both"
+                },
+                "userpwd": {
+                    "bsonType": "string",
+                    "title": "用户密码",
+                    "description": "用户密码",
+                    "trim": "both"
+                },
+                "usernickname": {
+                    "bsonType": "string",
+                    "title": "用户名",
+                    "description": "用户名",
+                    "trim": "both"
+                },
+                "useriphone": {
+                    "bsonType": "string",
+                    "title": "用户电话",
+                    "description": "用户电话",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "videoList": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "62a18de90cb5d50001ebfa57"
+                },
+                "videosrc": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/c30eb49c-c77b-473e-b418-ca432982c5df.MP4",
+                "vdauthor": "斗破苍穹动漫",
+                "adnumber": "7689",
+                "adcontent": "一代强者海波东，当保镖也重情重义#斗破苍穹三年之约",
+                "adpraise": "957",
+                "adtime": "2022-1-27 10:00",
+                "vdimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/99b0b7c0-7e12-47bc-af14-5e17e2d6c6b6.JPG",
+                "addz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png",
+                "adgz": "关注"
+            },
+            {
+                "_id": {
+                    "$oid": "62a18f46c2cedc0001986608"
+                },
+                "videosrc": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/c08acf52-dfb2-431c-bc2d-4affa0aa5328.MP4",
+                "vdauthor": "星辰变动漫",
+                "adnumber": "6583",
+                "adcontent": "一路走来，各方帮助，这次秦羽要独自面对了",
+                "adpraise": "695",
+                "adtime": "2022-4-4 20:00",
+                "vdimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/857bd902-532c-46f8-888d-b6511927a6cb.JPG",
+                "addz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png",
+                "adgz": "关注"
+            },
+            {
+                "_id": {
+                    "$oid": "62a18f4b2f77c40001a9e28b"
+                },
+                "videosrc": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/8ec59755-fbe0-4651-8a3e-46e746f6cb63.MP4",
+                "vdauthor": "星辰变动漫",
+                "adnumber": "6845",
+                "adcontent": "四季走来，曾经那个小树苗已然长成参天大树#星辰变第四季",
+                "adpraise": "564",
+                "adtime": "2022-4-26 20:00",
+                "vdimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/857bd902-532c-46f8-888d-b6511927a6cb.JPG",
+                "addz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png",
+                "adgz": "关注"
+            },
+            {
+                "_id": {
+                    "$oid": "62a18f507696a80001a04033"
+                },
+                "videosrc": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/ce8aeefe-8ed6-493e-ace5-eaf5557b50b6.MP4",
+                "vdauthor": "斗破苍穹动漫",
+                "adnumber": "8751",
+                "adcontent": "接下来就交给为师吧，这句话是多么让人安心#斗破苍穹三年之约",
+                "adpraise": "65632",
+                "adtime": "2022-05-13 20:00",
+                "vdimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/99b0b7c0-7e12-47bc-af14-5e17e2d6c6b6.JPG",
+                "addz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png",
+                "adgz": "关注"
+            },
+            {
+                "_id": {
+                    "$oid": "62a18f5af792990001641c38"
+                },
+                "videosrc": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/e34d3add-e3a8-4311-bd47-83652178b518.MP4",
+                "vdauthor": "斗破苍穹动漫",
+                "adnumber": "9842",
+                "adcontent": "感应到萧炎有难，我萧炎头号保镖海波东来了！#斗破苍穹三年之约",
+                "adpraise": "685",
+                "adtime": "2022-1-16 09:00",
+                "vdimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/99b0b7c0-7e12-47bc-af14-5e17e2d6c6b6.JPG",
+                "addz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png",
+                "adgz": "关注"
+            },
+            {
+                "_id": {
+                    "$oid": "62a18f60f6d14000017a665a"
+                },
+                "videosrc": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/807f5791-e2a8-449d-84ab-a1e49045e339.MP4",
+                "vdauthor": "路过的假面粉",
+                "adnumber": "7851",
+                "adcontent": "只要你记得，骑士就一直存在#假面骑士",
+                "adpraise": "595",
+                "adtime": "2022-4-29 14:45",
+                "vdimage": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/083ca096-17aa-45dc-b955-7223872f2dc6.JPG",
+                "addz": "https://vkceyugu.cdn.bspapp.com/VKCEYUGU-8d91458a-1052-4850-8462-aef2fdc42a72/7381d7b1-01e5-442c-ae92-e6e946d900da.png",
+                "adgz": "关注"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "videosrc": {
+                    "bsonType": "string",
+                    "title": "视频路径",
+                    "description": "视频路径",
+                    "trim": "both"
+                },
+                "vdauthor": {
+                    "bsonType": "string",
+                    "title": "视频作者",
+                    "description": "视频作者",
+                    "trim": "both"
+                },
+                "vdimage": {
+                    "bsonType": "string",
+                    "title": "作者头像",
+                    "description": "作者头像",
+                    "trim": "both"
+                },
+                "adnumber": {
+                    "bsonType": "int",
+                    "title": "视频播放量",
+                    "description": "视频播放量",
+                    "trim": "both"
+                },
+                "adcontent": {
+                    "bsonType": "string",
+                    "title": "视频介绍",
+                    "description": "视频介绍",
+                    "trim": "both"
+                },
+                "adpraise": {
+                    "bsonType": "int",
+                    "title": "视频点赞数",
+                    "description": "视频点赞数",
+                    "trim": "both"
+                },
+                "adtime": {
+                    "bsonType": "string",
+                    "title": "发布日期",
+                    "description": "发布日期",
+                    "trim": "both"
+                },
+                "adgz": {
+                    "bsonType": "string",
+                    "title": "关注作者",
+                    "description": "关注作者",
+                    "trim": "both"
+                },
+                "addz": {
+                    "bsonType": "string",
+                    "title": "点赞",
+                    "description": "点赞",
+                    "trim": "both"
+                }
+            }
+        }
+    },
+    "videoTitle": {
+        "data": [
+            {
+                "_id": {
+                    "$oid": "62a1651b996ab200019531db"
+                },
+                "videotitle": "千里眼"
+            },
+            {
+                "_id": {
+                    "$oid": "62a16528cc12f40001722ed3"
+                },
+                "videotitle": "搞笑"
+            },
+            {
+                "_id": {
+                    "$oid": "62a16536996ab2000195393c"
+                },
+                "videotitle": "娱乐"
+            },
+            {
+                "_id": {
+                    "$oid": "62a165428c195b00010591ef"
+                },
+                "videotitle": "社会"
+            },
+            {
+                "_id": {
+                    "$oid": "62a1654ff6d140000175bdd9"
+                },
+                "videotitle": "音乐"
+            },
+            {
+                "_id": {
+                    "$oid": "62a1655c68cebc0001edcee0"
+                },
+                "videotitle": "科技"
+            }
+        ],
+        "schema": {
+            "bsonType": "object",
+            "required": [],
+            "permission": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false
+            },
+            "properties": {
+                "_id": {
+                    "description": "ID，系统自动生成"
+                },
+                "videotitle": {
+                    "bsonType": "string",
+                    "title": "视频二级标题",
+                    "description": "视频二级标题",
+                    "trim": "both"
+                }
+            }
+        }
+    }
+}
